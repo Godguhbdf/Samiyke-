@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Samiyke Spraying Booth Company</title>
+  <meta name="description" content="Samiyke Spraying Booth Company — professional spray booth sales, installation & maintenance." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🖌️</text></svg>">
+
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --accent:#00b894;
+      --muted:#94a3b8;
+      --glass: rgba(255,255,255,0.03);
+      --radius:12px;
+      --max-width:1100px;
+      --gap:20px;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      color-scheme: dark;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background: linear-gradient(180deg,#071026 0%, #071022 40%, #071028 100%);
+      color:#e6eef6;
+      line-height:1.45;
+      padding:24px;
+      display:flex;
+      justify-content:center;
+    }
+
+    .container{width:100%;max-width:var(--max-width);}
+
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+      margin-bottom:28px;
+    }
+
+    .brand{display:flex;gap:12px;align-items:center;text-decoration:none;color:inherit;}
+    .logo{
+      width:56px;height:56px;border-radius:12px;
+      background:linear-gradient(135deg,var(--accent), #2dd4bf);
+      display:grid;place-items:center;
+      font-weight:800;color:#042027;
+    }
+
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600;}
+    nav a:hover{color:#fff;}
+    @media(max-width:980px){nav{display:none;}}
+
+    main{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+      border-radius:18px;
+      padding:28px;
+    }
+
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:20px;}
+    @media(max-width:980px){.grid{grid-template-columns:1fr;}}
+
+    .hero{
+      padding:18px;border-radius:12px;
+      display:flex;gap:18px;align-items:center;
+      background:rgba(255,255,255,0.02);
+    }
+    .hero-left{flex:1;}
+    .kicker{color:var(--accent);font-weight:700;font-size:13px;}
+    h1{margin:8px 0;font-size:28px;}
+    .lead{color:var(--muted);}
+
+    .btn{
+      background:var(--accent);
+      color:#042027;border:none;
+      padding:12px 16px;border-radius:10px;
+      font-weight:700;cursor:pointer;
+    }
+    .btn.ghost{
+      background:transparent;color:var(--muted);
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    .hero-right{
+      width:320px;padding:12px;border-radius:12px;
+      background:rgba(255,255,255,0.02);
+      text-align:center;
+    }
+
+    .section{margin-top:24px;}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+    @media(max-width:900px){.cards{grid-template-columns:repeat(2,1fr);}}
+    @media(max-width:600px){.cards{grid-template-columns:1fr;}}
+
+    .card{background:var(--card);padding:14px;border-radius:12px;}
+    .card p{color:var(--muted);}
+
+    aside .contact-card{
+      background:var(--glass);padding:16px;border-radius:12px;
+    }
+
+    input,textarea{
+      width:100%;padding:10px;margin-top:6px;
+      border-radius:8px;border:1px solid rgba(255,255,255,0.08);
+      background:transparent;color:inherit;
+    }
+
+    footer{
+      margin-top:24px;font-size:13px;color:var(--muted);
+      display:flex;justify-content:space-between;
+    }
+  </style>
+</head>
+
+<body>
+<div class="container">
+  <header>
+    <a class="brand" href="#">
+      <div class="logo">SS</div>
+      <div>
+        <strong>Samiyke</strong><br>
+        <small style="color:var(--muted)">Spraying Booth Company</small>
+      </div>
+    </a>
+
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="grid">
+      <section>
+        <div class="hero">
+          <div class="hero-left">
+            <div class="kicker">Commercial & Industrial</div>
+            <h1>High‑performance spray booths & installations</h1>
+            <p class="lead">
+              We supply, install and maintain professional spray booths across Nigeria.
+            </p>
+            <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+              Get a free quote
+            </button>
+          </div>
+
+          <div class="hero-right">
+            <strong>EcoFlow Pro 4200</strong><br>
+            <small class="lead">HEPA filtration • Energy efficient</small>
+          </div>
+        </div>
+
+        <div class="section" id="services">
+          <h2>Our Services</h2>
+          <div class="cards">
+            <div class="card">
+              <h3>Supply & Sales</h3>
+              <p>Custom and branded spray booths.</p>
+            </div>
+            <div class="card">
+              <h3>Installation</h3>
+              <p>Professional installation nationwide.</p>
+            </div>
+            <div class="card">
+              <h3>Maintenance</h3>
+              <p>Servicing, filters and spare parts.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <aside>
+        <div class="contact-card" id="contact">
+          <h3>Contact Us</h3>
+          <form id="contact-form">
+            <input required placeholder="Your name">
+            <input type="email" required placeholder="Email address">
+            <textarea required placeholder="Project details"></textarea>
+            <button class="btn" type="submit" style="width:100%;margin-top:10px;">
+              Send message
+            </button>
+          </form>
+          <small style="color:var(--muted)">
+            * Demo form. Connect to EmailJS or Formspree for real emails.
+          </small>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      <div>© <span id="year"></span> Samiyke Spraying Booth Company</div>
+      <div>Built with care</div>
+    </footer>
+  </main>
+</div>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  document.getElementById("contact-form").addEventListener("submit", function(e){
+    e.preventDefault();
+    alert("Message sent successfully (demo).");
+    this.reset();
+  });
+</script>
+
+</body>
+</html>
